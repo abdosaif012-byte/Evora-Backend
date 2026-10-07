@@ -1,0 +1,21 @@
+# in controller for products the index and show function are public so user without login can see it api
+  but update,store,destroy are private by authentication and authorization  
+
+# in user controller register is public but the rest are private by authentication and authorization 
+# only register is public and inside AutherController    
+
+#admin Sara.Ahmed@Evora.com || Sara.Ahmed.2007
+
+#authorization it will be check the role is admin or not using if condition
+
+#in profile page jsx i used 4 endpoints Profile,Users,Products,Orders first it use token to open profile and if you try to use this token in anything
+else 2 barier will stop you first the token only show the current user info , second tha authorization by admin role
+and  Users,Products,Orders is only appear for admins , and normal customer can't see those options
+
+#Orders realtions
+User → Orders: One user can have many orders.
+Order → User: Each order belongs to one user.
+Order → OrderItems: One order can contain many products/items.
+OrderItem → Order: Each item belongs to one order.
+OrderItem → Product: Each item points to one product.
+Product → OrderItems: One product can appear in many order items.
